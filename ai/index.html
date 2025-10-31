@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>教学管理系统 - teachManagerSystem</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="header">
+    <div class="brand">
+      <strong>镜湖大学</strong>
+      <span class="subtitle">教学管理系统</span>
+    </div>
+    <div class="user-area">
+      <div class="notif">🔔<span class="dot">●</span></div>
+      <div id="username">游客</div>
+      <button id="loginBtn" class="btn" onclick="doLogin()">去登录</button>
+    </div>
+  </header>
+
+  <!-- 左侧菜单 -->
+  <aside class="sidebar">
+    <div class="logo">教学管理系统</div>
+    <nav>
+      <div class="menu">学生管理
+        <div class="submenu">
+          <a href="#" onclick="openPage('student-query')">学生信息查询</a>
+          <a href="#" onclick="openPage('manage-punished')">管理受处分学生</a>
+          <a href="#" onclick="openPage('modify-student')">学生信息修改</a>
+        </div>
+      </div>
+      <div class="menu">成绩管理</div>
+      <div class="menu">教师管理</div>
+      <div class="menu">事务管理</div>
+      <div class="menu">实验室管理</div>
+    </nav>
+  </aside>
+
+  <!-- 主体内容区 -->
+  <main class="content">
+    <div class="navbar"><span id="pageTitle">个人中心</span></div>
+    <div id="tabs" class="tabs"><span class="tag">个人信息</span></div>
+    <div id="mainArea" class="mainArea">
+      <div class="card" id="personalCard">
+        <h3>请登录</h3>
+        <input id="acc" placeholder="账号 (admin)" class="input"><br>
+        <input id="pwd" type="password" placeholder="密码" class="input"><br>
+        <button class="btn" onclick="doLogin()">登录</button>
+      </div>
+    </div>
+  </main>
+
+<script src="app.js"></script>
+</body>
+</html>

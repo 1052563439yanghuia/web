@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>教学管理系统</title>
+  <style>
+    .daohanglan {
+      width: 100%;
+      height: 60px;
+      background-color: #004b9c;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .daohanglan .span1 {
+      color: white;
+      font-size: 18px;
+      line-height: 60px;
+      margin-left: 20px;
+    }
+
+    .daohanglan .span2 {
+      color: white;
+      font-size: 14px;
+      line-height: 60px;
+      text-indent: 2em;
+    }
+
+    .xiaoxitongzhimokuai {
+      width: 88px;
+      height: 60px;
+    }
+
+    .user {
+      color: white;
+      height: 18px;
+      width: 32px;
+    }
+
+    .denglu {
+      border-radius: 4px;
+      height: 40px;
+      margin-right: 20px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      margin-top: 12.5px;
+      cursor: pointer;
+    }
+
+    .daohanglanyou {
+      display: flex;
+      line-height: 60px;
+      gap: 40px;
+    }
+
+    .zuoce {
+      width: 200px;
+      height: 93vh;
+      background-color: #eff7fd;
+      overflow: auto;
+    }
+
+    .xitongbiaoti {
+      width: 190px;
+      height: 40px;
+      margin: 8px;
+      font-size: 16px;
+      color: #178fe6;
+      border: 1px solid #95b8e7;
+      background: linear-gradient(to right, #d1ebff, #eff7fd);
+      line-height: 40px;
+      text-align: center;
+    }
+
+    .xitongbiaoti:hover {
+      border: 1px dashed #178fe6;
+    }
+
+    .buju {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 20px;
+      padding: 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .zicaidan {
+      font-weight: bold;
+      color: #004b9c;
+    }
+
+    .xiajiantou {
+      width: 15px;
+      height: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    /* 旋转箭头 */
+    .rotate {
+      transform: rotate(180deg);
+    }
+
+    /* 子菜单 */
+    .submenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background-color: #fff;
+      border-left: 3px solid #95b8e7;
+      margin: 0 10px;
+    }
+
+    .submenu.active {
+      max-height: 200px; /* 展开最大高度，可根据子项多少调节 */
+    }
+
+    .submenu div {
+      padding: 8px 16px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .submenu div:hover {
+      background-color: #e6f2ff;
+    }
+
+    .you {
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      flex: 1;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .gerenxinxi{
+        display: flex;
+        margin: 10px;
+        width: 200px;
+        height: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        border: 2px dotted #000;
+    }
+    .tuichu{
+        width: 80px;
+        height: 40px;
+        border: 1px solid #9fa2a5;
+        background-color: #ffffff;
+    }
+    .tuichu:hover{
+        background-color: #5fa7eb;
+        border: 1px dotted #5fa7eb;
+    }
+
+    input {
+      width: 370px;
+      height: 30px;
+    }
+
+    main {
+      display: flex;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="daohanglan">
+      <div>
+        <span class="span1">镜湖大学——</span>
+        <span class="span2">教学管理系统</span>
+      </div>
+      <div class="daohanglanyou">
+        <div class="xiaoxitongzhimokuai">用户信息</div>
+        <div class="user">游客</div>
+        <button class="denglu">去登录</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="zuoce">
+      <div class="xitongbiaoti">教学管理系统</div>
+
+      <!-- 学生管理 -->
+      <div class="buju">
+        <div class="zicaidan">学生管理</div>
+        <img src="./image/xia.svg" class="xiajiantou" />
+      </div>
+      <div class="submenu">
+        <div>学生信息修改</div>
+        <div>管理员受处分学生</div>
+        <div>学生信息修改</div>
+      </div>
+
+      <!-- 成绩管理 -->
+      <div class="buju">
+        <div class="zicaidan">成绩管理</div>
+        <img src="./image/xia.svg" class="xiajiantou" />
+      </div>
+      
+
+      <!-- 教师管理 -->
+      <div class="buju">
+        <div class="zicaidan">教师管理</div>
+        <img src="./image/xia.svg" class="xiajiantou" />
+      </div>
+      
+
+      <!-- 事务管理 -->
+      <div class="buju">
+        <div class="zicaidan">事务管理</div>
+        <img src="./image/xia.svg" class="xiajiantou" />
+      </div>
+      
+
+      <!-- 实验室管理 -->
+      <div class="buju">
+        <div class="zicaidan">实验室管理</div>
+        <img src="./image/xia.svg" class="xiajiantou" />
+      </div>
+      
+    </div>
+    <div class="you">
+        <div class="gerenxinxi">昵称：屈侯</div>
+        <div class="gerenxinxi">身份：教师</div>
+        <button class="tuichu">退出登录</button>
+    </div>
+    
+  </main>
+
+  <script>
+    const menus = document.querySelectorAll('.buju');
+
+    menus.forEach(menu => {
+      menu.addEventListener('click', () => {
+        const submenu = menu.nextElementSibling;
+        const arrow = menu.querySelector('.xiajiantou');
+
+        // 折叠其他打开的菜单
+        document.querySelectorAll('.submenu').forEach(s => {
+          if (s !== submenu) s.classList.remove('active');
+        });
+        document.querySelectorAll('.xiajiantou').forEach(a => {
+          if (a !== arrow) a.classList.remove('rotate');
+        });
+
+        // 当前菜单展开/收起
+        submenu.classList.toggle('active');
+        arrow.classList.toggle('rotate');
+      });
+    });
+  </script>
+</body>
+</html>

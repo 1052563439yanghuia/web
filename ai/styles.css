@@ -1,0 +1,163 @@
+:root {
+  --top: #004b9c;
+  --sidebar: #eff7fd;
+  --accent: #178fe6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC';
+  background: #f7fafc;
+}
+
+/* 顶部导航栏 */
+.header {
+  height: 60px;
+  background: var(--top);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.brand { font-size: 18px; }
+.brand .subtitle { margin-left: 8px; font-size: 14px; font-weight: 400; }
+
+.user-area {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.user-area .dot { color: #ff4d4f; margin-left: 4px; }
+
+/* 左侧菜单栏 */
+.sidebar {
+  width: 220px;
+  background: var(--sidebar);
+  height: calc(100vh - 60px);
+  padding: 12px;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  overflow: auto;
+  border-right: 1px solid #e6eef9;
+}
+.logo {
+  height: 44px;
+  background: linear-gradient(#d1ebff, #eff7fd);
+  border: 1px solid #95B8E7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.menu {
+  padding: 8px 6px;
+  font-weight: 600;
+  color: #0f172a;
+}
+.submenu {
+  margin-left: 8px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.submenu a {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px;
+  border-radius: 4px;
+}
+.submenu a:hover {
+  background: #e6f0ff;
+}
+
+/* 主体内容区 */
+.content {
+  margin-left: 220px;
+  padding: 12px;
+  min-height: calc(100vh - 60px);
+}
+
+.navbar {
+  height: 34px;
+  background: #EBF3FB;
+  border: 1px solid #95B8E7;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 6px;
+}
+
+.tabs { margin-top: 8px; }
+
+.tag {
+  display: inline-block;
+  min-width: 74px;
+  height: 28px;
+  border: 1px solid #2563E8;
+  border-radius: 6px 6px 0 0;
+  padding: 4px 10px;
+  margin-right: 6px;
+  background: #fff;
+}
+
+.card {
+  background: #fff;
+  padding: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  margin-top: 12px;
+  border-radius: 6px;
+}
+
+.btn {
+  border: 1px dashed #000;
+  background: #fff;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.table th {
+  background: #F3F4F6;
+  color: #374151;
+}
+
+.input {
+  width: 360px;
+  height: 36px;
+  padding: 6px;
+  margin: 6px 0;
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+}
+
+.mainArea .controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* 小型输入框（脚本内添加） */
+.input-small {
+  height: 32px;
+  padding: 6px;
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+}
