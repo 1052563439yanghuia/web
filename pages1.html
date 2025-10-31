@@ -130,18 +130,40 @@
 
     .you {
       display: flex;
-      align-items: center;
       padding: 4px;
       flex: 1;
-      justify-content: center;
+      margin-top: 10px;
     }
 
-    
+    input{
+      width: 240px;
+      height: 32px;
+    }
+    .xialakuang{
+      width: 80px;
+      height: 32px;
+      border: 1px solid rgb(168, 167, 167);
+      text-align: center;
+      line-height: 32px;
+      margin-left: 10px;
+    }
+    .jingxuan{
+      width: 52px;
+      height: 32px;
+    }
+    button{
+      width: 58px;
+      height: 30px;
+      border: 1px dotted rgb(168, 167, 167);
+      margin-left: 10px;
+    }
 
     main {
       display: flex;
     }
-
+    .sousuo{
+      display: flex;
+    }
   </style>
 </head>
 <body>
@@ -202,7 +224,25 @@
       </div>
       
     </div>
-
+    <div class="you">
+      <div class="sousuo">
+        <input type="text" placeholder="请输入...">
+        <div>
+          <div class="xialakuang">
+            <span>全部</span>
+            <img src="./image/xia.svg" class="xiajiantou" />
+          </div>
+          <div class="submenu">
+            <div>学号</div>
+            <div>姓名</div>
+            <div>年纪</div>
+          </div>
+        </div>
+        <div class="jingxuan" style="text-align: center;line-height: 32px;">精确</div>
+        <div class="" style="width: 20px; height: 20px;border: 1px solid #178fe6; text-align: center;margin-top: 6px;"></div>
+        <button class="">查询</button>
+      </div>
+    </div>
     
   </main>
 
@@ -226,6 +266,16 @@
         submenu.classList.toggle('active');
         arrow.classList.toggle('rotate');
       });
+    });
+
+    // 搜索全部
+    const dropdown = document.querySelector('.xialakuang');
+    const dropdownMenu = dropdown.nextElementSibling;
+    const dropdownArrow = dropdown.querySelector('.xiajiantou');
+
+    dropdown.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('active');
+      dropdownArrow.classList.toggle('rotate');
     });
   </script>
 </body>
